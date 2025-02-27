@@ -124,7 +124,18 @@
     @apply border-border outline-ring/50;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-[#0C121A] text-foreground overflow-hidden overflow-y-hidden;
   }
 }
 
+@keyframes float {
+  0% {
+    transform: translateY(100px);
+  }
+  50% {
+    transform: translateY(-40px);
+  }
+  100% {
+    transform: translateY(80px);
+  }
+}
