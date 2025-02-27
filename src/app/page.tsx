@@ -5,9 +5,10 @@ export default function Home() {
   const words = ["Dev_", "Hacker_", "Coder_", "Engineer_"];
 
   return (
-    <div className="flex flex-col items-center justify-center h-screen bg-[#0C121A] overflow-hidden">
+    <div className="relative flex min-h-screen flex-col items-center justify-center bg-[#0C121A] overflow-hidden">
+      {/* Logo SVG */}
       <svg
-        className="absolute top-[40px] left-[40px] z-20"
+        className="absolute left-4 top-4 z-20 w-[100px] sm:w-[120px] md:w-[131px]"
         width="131"
         height="22"
         viewBox="0 0 131 22"
@@ -22,7 +23,7 @@ export default function Home() {
 
       {/* First SVG with animation */}
       <svg
-        className="absolute bottom-1/4 left-0 animate-float"
+        className="absolute bottom-[120px] left-0 w-[200px] animate-float sm:w-[300px] md:w-[400px] lg:w-[752px]"
         width="752"
         height="638"
         viewBox="0 0 752 638"
@@ -60,9 +61,9 @@ export default function Home() {
         </defs>
       </svg>
 
-      {/* Second SVG with animation, slightly offset timing */}
+      {/* Second SVG with animation */}
       <svg
-        className="absolute -bottom-[0px] right-8 animate-float"
+        className="absolute bottom-0 right-0 w-[300px] animate-float sm:w-[400px] md:w-[600px] lg:w-[1256px]"
         width="1256"
         height="1006"
         viewBox="0 0 1256 1006"
@@ -100,17 +101,19 @@ export default function Home() {
         </defs>
       </svg>
 
-      <h1 className="md:text-[72px] font-bold text-white max-w-[55%] md:max-w-[40%] md:leading-[79px] z-20">
+      {/* Main Heading */}
+      <h1 className="z-20 mx-4 max-w-[90%] text-center text-[32px] font-bold text-white leading-[1.2] sm:text-[48px] md:max-w-[70%] md:text-[60px] lg:max-w-[55%] lg:text-[72px] lg:leading-[79px]">
         The <span className="text-[#5FEBAA]">Ultimate</span> Platform For All
         Things <FlipWords words={words} className="text-[#5FEBAA]" />
       </h1>
 
-      <div className="mt-16 md:mt-24 z-20">
-        <p className="text-white md:text-[48px] md:text-5xl ">
+      {/* Subtext */}
+      <div className="z-20 mt-8 text-center sm:mt-12 md:mt-16">
+        <p className="text-[24px] text-white sm:text-[36px] md:text-[48px]">
           <span className="font-bold">Coming Soon</span>{" "}
-          <span className="text-white font-normal">—</span> Fall 2025
+          <span className="font-normal">—</span> Fall 2025
         </p>
-        <p className="md:text-[24px] md:text-2xl  text-left text-[#D2D2D2]">
+        <p className="mt-2 text-[16px] text-[#D2D2D2] sm:text-[20px] md:mt-4 md:text-[24px]">
           <span className="font-bold">Built By Developers</span>{" "}
           <span className="text-[#D2D2D2]">—</span> For Developers
         </p>
@@ -118,16 +121,3 @@ export default function Home() {
     </div>
   );
 }
-
-// Add this to your global CSS file (globals.css)
-// @keyframes float {
-//   0% {
-//     transform: translateY(0px);
-//   }
-//   50% {
-//     transform: translateY(-20px);
-//   }
-//   100% {
-//     transform: translateY(0px);
-//   }
-// }
